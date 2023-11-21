@@ -24,25 +24,28 @@ EOF
   default     = {}
 }
 
-variable "selector" {
-  description = "The selector, a map, which is used for dependencies or collaborations."
-  type        = map(any)
-  default     = {}
+#
+# Connection Fields
+#
+
+variable "hosts" {
+  description = "The host list of the Kafka service."
+  type        = list(string)
 }
 
-variable "endpoint_internal" {
-  description = "The internal endpoints of the resource."
-  type        = list(string)
-  default     = []
+variable "port" {
+  description = "The port of the Kafka service."
+  type        = number
+  default     = 9092
 }
 
 variable "username" {
-  description = "The username of kafka service"
+  description = "The username of the account to access the service."
   type        = string
 }
 
 variable "password" {
-  description = "The password of kafka service."
+  description = "The password of the account to access the service."
   type        = string
   sensitive   = true
 }
