@@ -54,7 +54,3 @@ output "password" {
   value     = module.this.password
   sensitive = true
 }
-
-output "endpoints" {
-  value = module.this.endpoints
-}
