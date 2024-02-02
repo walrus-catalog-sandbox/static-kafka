@@ -25,7 +25,6 @@ components:
           type: number
           description: The port of the Kafka service.
           default: 9092
-          nullable: true
           x-walrus-ui:
             group: Basic
             order: 5
